@@ -1,0 +1,8 @@
+[package]
+name = "rust_adventure"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rprompt = "2.1.1"
+rand = "0.9.0-alpha.1"
