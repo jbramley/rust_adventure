@@ -14,7 +14,7 @@ fn main() {
     let mut current_room: usize = 0;
     let tulip_room = rand::thread_rng().gen_range(0..rooms.len());
     let num_goats = rand::thread_rng().gen_range(2..5);
-    let goats = Vec::from_iter(
+    let mut goats = Vec::from_iter(
         (0..num_goats)
             .map(|_| rand::thread_rng().gen_range(0..rooms.len()))
             .map(|r| Goat { room: r }),
@@ -66,5 +66,10 @@ fn main() {
             }
             _ => println!("I don't understand."),
         }
+        goats
+            .iter_mut()
+            .map(|mut g| g.maybe_move(&rooms[g.room].doors))
+            .filter_m
+            .filter(|r| r.is_some());
     }
 }
