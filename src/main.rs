@@ -66,10 +66,9 @@ fn main() {
             }
             _ => println!("I don't understand."),
         }
-        goats
+        _ = goats
             .iter_mut()
             .map(|mut g| g.maybe_move(&rooms[g.room].doors))
-            .filter_m
             .filter(|r| r.is_some());
     }
 }
